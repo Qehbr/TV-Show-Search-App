@@ -6,7 +6,7 @@ form.addEventListener("submit", async e => {
     const searchedMovie = form.elements.query.value;
     if (searchedMovie != "") {
         const config = { params: { q: searchedMovie } };
-        const searchResult = await axios.get(`http://api.tvmaze.com/search/shows`, config);
+        const searchResult = await axios.get(`https://api.tvmaze.com/search/shows`, config);
         // makeImages(searchResult.data);
         createColumns(searchResult.data);
     }
